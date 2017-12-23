@@ -6,6 +6,15 @@ public class Card {
 	private int position = 0; //0=on board 1=in hand
 	private int type; //0=property, 1 = money, 2 = action card
 	private int value;
+	
+	public int getValue() {
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
+	}
+
 	private String name;
 	
 	
