@@ -27,4 +27,15 @@ public class Card {
 	public void play(int p) {
 		
 	}
+	
+
+	
+	public int getType() {
+		return type;
+	}
+
+	public String toString() {
+		return name;
+	}
+	
 }

@@ -56,8 +56,8 @@ public class Player {
 		this.hand = hand;
 	}
 	
-	public void assignCards(int a, Player p, Deck d) {
-		for(int i=a;i<a;i++) {
+	public void assignCards(int numberOfCards, Player p, Deck d) {
+		for(int i=0;i<numberOfCards;i++) {
 			Random rand = new Random();
 			int b = rand.nextInt(d.getDeck().size())+0;
 			Card card = d.getDeck().get(b);

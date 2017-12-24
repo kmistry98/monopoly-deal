@@ -7,7 +7,7 @@ public class Cash extends Card{
 	private int value;
 	
 	public Cash(int value) {
-		super(1,value, name);
+		super(1,value, (name + ":£" + value + "M"));
 	}
 
 }
