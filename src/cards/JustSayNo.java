@@ -9,5 +9,6 @@ public class JustSayNo extends Card{
 		super(2, 4, name);
 	}
 	
+	
 
 }

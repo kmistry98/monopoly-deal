@@ -9,4 +9,5 @@ public class Cash extends Card{
 	public Cash(int value) {
 		super(1,value, name);
 	}
+
 }
