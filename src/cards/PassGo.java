@@ -9,10 +9,11 @@ public class PassGo extends Card{
 		super(2, 1, "Pass Go");
 		// TODO Auto-generated constructor stub
 	}
-	public void passGo(Player p, Deck d) {
-		for (int i=0;i>2;i++) {
-			p.assignCards(2,p,d);
-		}
+	public void play(Player p, Deck d) {
+			p.assignCards(2,p);
+
+		System.out.println("hello");
+
 	}
 
 }

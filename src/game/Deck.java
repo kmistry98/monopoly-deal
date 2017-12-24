@@ -41,7 +41,7 @@ public class Deck {
 		this.size = size;
 	}
 
-	public void addCards() {
+	public  void addCards() {
 
 
 

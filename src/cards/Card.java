@@ -1,5 +1,8 @@
 package cards;
 
+import game.Deck;
+import game.Player;
+
 public class Card {
 
 	private int ownedBy = 0 ; //0 = board, 1= player1 2 = player2
@@ -24,9 +27,9 @@ public class Card {
 		this.name = name;
 	}
 	
-	public void play(int p) {
-		
-	}
+//	public void play(Player p, Deck d) {
+//		
+//	}
 	
 
 	

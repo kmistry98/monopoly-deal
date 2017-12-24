@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import cards.Card;
+import cards.PassGo;
 import cards.Property;
 
 public class Player {
@@ -13,6 +14,11 @@ public class Player {
 	private ArrayList<Property> property = new ArrayList<Property>();
 	private ArrayList<Card> money = new ArrayList<Card>();
 	private int totalVal;
+	private Deck deck;
+	
+	public Player(Deck d) {
+		this.deck = d;
+	}
 	
 	public boolean checkCards() {
 		if (hand.size() > 7) {
@@ -52,17 +58,56 @@ public class Player {
 		return hand;
 	}
 
+	
+	public ArrayList<Property> getProperty() {
+		return property;
+	}
+
+	public ArrayList<Card> getMoney() {
+		return money;
+	}
+
 	public void setHand(ArrayList<Card> hand) {
 		this.hand = hand;
 	}
 	
-	public void assignCards(int numberOfCards, Player p, Deck d) {
+	public void assignCards(int numberOfCards, Player p) {
 		for(int i=0;i<numberOfCards;i++) {
 			Random rand = new Random();
-			int b = rand.nextInt(d.getDeck().size())+0;
-			Card card = d.getDeck().get(b);
-			d.getDeck().remove(b);
+			int b = rand.nextInt(deck.getDeck().size())+0;
+			Card card = deck.getDeck().get(b);
+			deck.getDeck().remove(b);
 			p.getHand().add(card);
+		}
+	}
+	
+	public Card chooseCard(Card c) {
+		return c;
+	}
+	public void playCard(Card c) {
+		((PassGo) c).play(this,deck);
+		hand.remove(c);
+	}
+	
+	public void pay(int value, ArrayList<Card> chosen , Player payee, Player receiver) {
+		int v =0;
+		for(Card c: chosen) {
+			v=v+c.getValue();
+		}
+		
+		if(v>=value) {
+			for(Card c: chosen) {
+				if(payee.getMoney().contains(c)) {
+					payee.getMoney().remove(c);
+					receiver.getMoney().add(c);
+				}
+				else {
+					payee.getProperty().remove(c);
+					receiver.getProperty().add((Property) c);
+					
+				}
+			}
+			
 		}
 	}
 	
