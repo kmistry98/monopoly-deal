@@ -9,11 +9,11 @@ public class Property extends Card{
 	private int rentTwoCard;
 	private int rentThreeCard;
 	private int rentFourCard;
-	private int rentFullSet;
 	
 
 	public Property(String name, int value, int rentOneCard, int rentTwoCard, String colour) {
 		super(0, value, name);
+		
 		this.rentOneCard = rentOneCard;
 		this.rentTwoCard = rentTwoCard;
 		this.colour = colour;
@@ -21,13 +21,15 @@ public class Property extends Card{
 	
 	public Property(String name, int value, int rentOneCard,int rentTwoCard, int rentThreeCard, String colour) {
 		super(0, value, name);
+		
 		this.rentOneCard = rentOneCard;
 		this.rentThreeCard = rentThreeCard;
 		this.rentTwoCard = rentTwoCard;
 		this.colour = colour;
 	}
-	public Property(String name, int value, int rentOneCard,int rentTwoCard, int rentThreeCard, int rentFourCard, String colour) {
+	public Property( String name, int value, int rentOneCard,int rentTwoCard, int rentThreeCard, int rentFourCard, String colour) {
 		super(0, value, name);
+		
 		this.rentOneCard = rentOneCard;
 		this.rentTwoCard = rentTwoCard;
 		this.rentThreeCard = rentThreeCard;
@@ -78,13 +80,8 @@ public class Property extends Card{
 		this.rentThreeCard = rentThreeCard;
 	}
 
-	public int getRentFullSet() {
-		return rentFullSet;
-	}
 
-	public void setRentFullSet(int rentFullSet) {
-		this.rentFullSet = rentFullSet;
-	}
+
 
 	
 	

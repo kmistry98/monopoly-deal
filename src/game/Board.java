@@ -1,11 +1,17 @@
 package game;
 
-import java.util.ArrayList;
 
-import cards.Card;
 
-public class Board {
+public  class Board {
 	
-	private ArrayList<Deck> deck = new ArrayList<Deck>();
+	private Deck deck;
+	Player p1 = new Player();
+	Player p2 = new Player();
 	
+	public Board() {
+		p1.assignCards(5, p1, deck);
+		p2.assignCards(5,p2,deck);
+		
+		
+	}
 }

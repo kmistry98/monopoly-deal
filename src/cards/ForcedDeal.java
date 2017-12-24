@@ -1,6 +1,8 @@
 	package cards;
 
-	public class ForcedDeal extends Card{
+import game.Player;
+
+public class ForcedDeal extends Card{
 		private boolean fullSet;
 		
 		
@@ -16,6 +18,12 @@
 				return true;
 			}
 		}
+		
+//		public void steal(Property p, Player a) {
+//			if(p.getCardsInSet() == a.numberOfCardsInSet(p)) {
+//				fullSet = true;
+//			}
+//		}
 		
 	}
 

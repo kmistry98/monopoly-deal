@@ -6,7 +6,8 @@ public class ItsMyBirthday extends Card{
 	public ItsMyBirthday() {
 		super(2, 2, "It's My Birthday!");
 	}
-
+	
+	
 
 	
 }

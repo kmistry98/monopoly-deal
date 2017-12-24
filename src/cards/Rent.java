@@ -20,17 +20,18 @@ public class Rent extends Card{
 
 	}
 
-	public int rentAmount(Property p, Player d) {
-		if(d.numberOfCardsInSet(p) == 1) {
+	public int rentAmount(Player d, Property p) {
+		String colour = p.getColour();
+		if(d.numberOfCardsInSet(colour) == 1) {
 			return p.getRentOneCard();
 		}
-		else if(d.numberOfCardsInSet(p) == 2) {
+		else if(d.numberOfCardsInSet(colour) == 2) {
 			return p.getRentTwoCard();
 		}
-		else if(d.numberOfCardsInSet(p) == 3) {
+		else if(d.numberOfCardsInSet(colour) == 3) {
 			return p.getRentThreeCard();
 		}
-		else if(d.numberOfCardsInSet(p) == 4) {
+		else if(d.numberOfCardsInSet(colour) == 4) {
 			return p.getRentFourCard();
 		}
 		else {
