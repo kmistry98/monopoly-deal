@@ -1,6 +1,7 @@
 package cards;
 
-import game.Deck;
+import java.util.ArrayList;
+
 import game.Player;
 
 public class Card {
@@ -20,7 +21,13 @@ public class Card {
 
 	private String name;
 	
-	
+	public void play(Player p) {
+		
+	}
+	public String getName() {
+		return name;
+	}
+
 	public Card(int type,int value, String name) {
 		this.type = type;
 		this.value = value;
@@ -30,7 +37,17 @@ public class Card {
 //	public void play(Player p, Deck d) {
 //		
 //	}
+	public void transferCard(Card c, Player p1, Player p2) {
+		if(c.getType() == 0) {
+			p1.getProperty().remove(c);
+			p2.getProperty().add((Property) c);
+		}
+		else {
+			p1.getMoney().remove(c);
+			p2.getMoney().add(c);
+		}
 	
+	}
 
 	
 	public int getType() {

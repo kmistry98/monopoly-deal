@@ -11,8 +11,8 @@ public class Player {
 	private ArrayList<Card> hand = new ArrayList<Card>();
 
 
-	private ArrayList<Property> property = new ArrayList<Property>();
-	private ArrayList<Card> money = new ArrayList<Card>();
+	private ArrayList<Property> property = new ArrayList<Property>(); //type 0
+	private ArrayList<Card> money = new ArrayList<Card>();  //type 1
 	private int totalVal;
 	private Deck deck;
 	
@@ -62,6 +62,39 @@ public class Player {
 	public ArrayList<Property> getProperty() {
 		return property;
 	}
+	
+	public ArrayList<String> getPropertyAsString(){
+		ArrayList<String> arr = new ArrayList<String>();
+		for(Property prop: property) {
+			arr.add(prop.getName());
+		}
+		if(arr.isEmpty()) {
+			arr.add("No properties put down yet!");
+			return arr;
+		}
+		return arr;
+	}
+	
+	public ArrayList<String> getMoneyAsString(){
+		ArrayList<String> arr = new ArrayList<String>();
+		for(Card prop: money) {
+			arr.add(prop.getName());
+		}
+		if(arr.isEmpty()) {
+			arr.add("No money put down yet!");
+			return arr;
+		}
+		return arr;
+	}
+	
+	public ArrayList<String> getHandAsString(){
+		ArrayList<String> arr = new ArrayList<String>();
+		for(Card h: hand) {
+			arr.add(h.getName());
+		}
+		return arr;
+	}
+	
 
 	public ArrayList<Card> getMoney() {
 		return money;
@@ -78,16 +111,17 @@ public class Player {
 			Card card = deck.getDeck().get(b);
 			deck.getDeck().remove(b);
 			p.getHand().add(card);
+			
 		}
 	}
 	
 	public Card chooseCard(Card c) {
 		return c;
 	}
-	public void playCard(Card c) {
-		((PassGo) c).play(this,deck);
-		hand.remove(c);
-	}
+//	public void playCard(Card c) {
+//		((PassGo) c).play(this,deck);
+//		hand.remove(c);
+//	}
 	
 	public void pay(int value, ArrayList<Card> chosen , Player payee, Player receiver) {
 		int v =0;

@@ -1,5 +1,7 @@
 package cards;
 
+import game.Player;
+
 public class SlyDeal extends Card{
 	private boolean fullSet;
 	
@@ -16,5 +18,11 @@ public class SlyDeal extends Card{
 			return true;
 		}
 	}
+	
+//	public void play(Property p, Player p1, Player p2) {
+//	if(p.getCardsInSet() == a.numberOfCardsInSet(p)) {
+//		fullSet = true;
+//	}
+//}
 	
 }

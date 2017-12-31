@@ -17,6 +17,7 @@ public class Property extends Card{
 		this.rentOneCard = rentOneCard;
 		this.rentTwoCard = rentTwoCard;
 		this.colour = colour;
+		this.value = value;
 	}
 	
 	public Property(String name, int value, int rentOneCard,int rentTwoCard, int rentThreeCard, String colour) {
@@ -26,6 +27,8 @@ public class Property extends Card{
 		this.rentThreeCard = rentThreeCard;
 		this.rentTwoCard = rentTwoCard;
 		this.colour = colour;
+		this.value = value;
+
 	}
 	public Property( String name, int value, int rentOneCard,int rentTwoCard, int rentThreeCard, int rentFourCard, String colour) {
 		super(0, value, name);
@@ -35,6 +38,11 @@ public class Property extends Card{
 		this.rentThreeCard = rentThreeCard;
 		this.rentFourCard = rentFourCard;
 		this.colour = colour;
+		this.value = value;
+
+	}
+	public String getName() {
+		return name;
 	}
 	
 	public String getColour() {

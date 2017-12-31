@@ -1,5 +1,7 @@
 package cards;
 
+import java.util.ArrayList;
+
 import game.Player;
 
 public class ItsMyBirthday extends Card{
@@ -12,6 +14,10 @@ public class ItsMyBirthday extends Card{
 	public int getPaid(Player p1, Player p2) {
 		
 		return CASH_ASKED_FOR;
+	}
+	
+	public void play(Player p1, Player p2, ArrayList<Card> c ) {
+		p1.pay(2, c, p1, p2);
 	}
 
 	
