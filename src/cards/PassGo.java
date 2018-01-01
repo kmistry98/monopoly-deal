@@ -1,6 +1,7 @@
 package cards;
 
-import game.Deck;
+import javax.swing.DefaultListModel;
+
 import game.Player;
 
 public class PassGo extends Card{
@@ -9,7 +10,6 @@ public class PassGo extends Card{
 		super(2, 1, "Pass Go");
 		// TODO Auto-generated constructor stub
 	}
-	@Override
 	public void play(Player p) {
 			p.assignCards(2,p);
 

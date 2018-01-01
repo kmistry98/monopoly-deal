@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
 
 import cards.Card;
+import view.Hand;
+import view.MainBoard;
 
 public  class Board {
 

@@ -23,25 +23,9 @@ public class Hand {
 	private static Player p;
 	private static DefaultListModel propertyModel;
 	private static DefaultListModel moneyModel;
-	private static JLabel cardsInMiddle;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Hand window = new Hand(p,propertyModel,moneyModel,cardsInMiddle);
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-
+	private DefaultListModel listModel;
+	private JLabel cardsInMiddle;
+	public static int counter = 0;
 
 	/**
 	 * Create the application.
@@ -52,7 +36,7 @@ public class Hand {
 		this.p = p;
 		this.cardsInMiddle = cardsInMiddle;
 		initialize();
-		Hand.frame.setVisible(true);
+		frame.setVisible(true);
 	}
 
 	/**
@@ -61,7 +45,7 @@ public class Hand {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 700, 464);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
 
@@ -108,4 +92,15 @@ public class Hand {
 		btnNewButton_2.addActionListener(new PuttingCardDown(list,p,listModel,cardsInMiddle));
 
 	}
+	
+	public static void checkNumberOfCardsPutDown() {
+		if(counter>=3) {
+			frame.dispose();
+			
+		}
+	}
+
+	
+	
+	
 }

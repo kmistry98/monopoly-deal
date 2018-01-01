@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import cards.Card;
 import game.Board;
 import game.Player;
+import view.Hand;
 
 public class PuttingCardDown implements ActionListener{
 
@@ -31,9 +32,11 @@ public class PuttingCardDown implements ActionListener{
 		if(c.getType() == 2) {
 			listModel.remove(list.getSelectedIndex());
 			Board.getCardsInTheMiddle().add(c);
-			c.play(player);
+			//c.play(player);
 			label.setText(c.getName());
 			//add to cards in the middle
+			Hand.counter++;
+			Hand.checkNumberOfCardsPutDown();
 		}
 		else {
 			JOptionPane.showMessageDialog(list,"Please select an action card");

@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 
 import cards.Card;
 import game.Player;
+import view.Hand;
 
 public class AddCardAsProperty implements ActionListener{
 	private JList list;
@@ -34,10 +35,16 @@ public class AddCardAsProperty implements ActionListener{
 				model.remove(0);
 				model.addElement(c);
 				listModel.remove(list.getSelectedIndex());
+				Hand.counter++;
+				Hand.checkNumberOfCardsPutDown();
+
 			}
 			else {
 				model.addElement(c);
 				listModel.remove(list.getSelectedIndex());
+				Hand.counter++;
+				Hand.checkNumberOfCardsPutDown();
+
 			}
 		}
 		else {

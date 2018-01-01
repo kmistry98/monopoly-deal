@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 
 import cards.Card;
 import game.Player;
+import view.Hand;
 
 public class AddCardAsMoney implements ActionListener{
 
@@ -36,10 +37,14 @@ public class AddCardAsMoney implements ActionListener{
 				moneyModel.remove(0);
 				moneyModel.addElement(c);
 				listModel.remove(list.getSelectedIndex());
+				Hand.counter++;
+				Hand.checkNumberOfCardsPutDown();
 			}
 			else {
 				moneyModel.addElement(c);
 				listModel.remove(list.getSelectedIndex());
+				Hand.counter++;
+				Hand.checkNumberOfCardsPutDown();
 			}
 		}
 		else {

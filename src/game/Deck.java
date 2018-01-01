@@ -70,7 +70,7 @@ public class Deck {
 		deck.add(new Property("Pall Mall",2,1,2,4,"Pink"));
 		deck.add(new Property("The Angel Islington",1,1,2,3,"Light Blue"));
 		deck.add(new Property("Euston Road",1,1,2,3,"Light Blue"));
-		deck.add(new Property("Pentonville Road",1,1,2,3,"Light Blue"));
+		deck.add(new Property("To Change Road",1,1,2,3,"Light Blue"));
 		deck.add(new Property("Old Kent Road",1,1,2,"Brown"));
 		deck.add(new Property("Whitechapel Road",1,1,2,"Brown"));
 		deck.add(new Property("Marylebone Station",1,1,2,3,4,"Black"));
